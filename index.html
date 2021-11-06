@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Vehicle tracking and speed Detection</title>
+    <style>
+	img {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 35%
+	}
+	
+	/* Split the screen in half */
+	.split {
+	  height: 100%;
+	  width: 50%;
+	  margin-top: 5%;
+	  position: fixed;
+	  z-index: 1;
+	  top: 0;
+	  overflow-x: hidden;
+	  padding-top: 10px;
+	}
+
+	/* Control the left side */
+	.left {
+	  left: 0;
+	 
+	  background-color: white;
+	}
+
+	/* Control the right side */
+	.right {
+	  right: 0;
+	  background-color: white;
+	  padding-right:30px;
+	}
+
+	/* If you want the content centered horizontally and vertically */
+	.centered {
+	  position: absolute;
+	  top: 40%;
+	  left: 40%;
+	  transform: translate(-50%, -50%);
+	  text-align: center;
+	}
+
+	/* Style the image inside the centered container, if needed */
+	.centered img {
+	  display: block;
+	  margin-left: auto;
+  	  margin-right: auto;
+	  width: 170%
+	}
+	.header {	
+			top:0;	
+			margin:0px;
+			left: 0px;
+			right: 0px;
+			position: fixed;
+			background: #074404;
+			color: white;
+			box-shadow: 0px 8px 4px grey;
+			overflow: hidden;
+			padding: 15px;
+			font-size: 2.25vw;
+			width: 100%;
+			padding-left:80px;
+			text-align: left;
+		}
+    </style>
+  </head>
+  <body>
+  <div class="header">
+    <div><marquee direction="right" scrollamount=15>Vehicle tracking and speed Detection</marquee></div>
+	
+  </div>
+	
+	<div class="split left">
+		<div class="centered">
+			<img id="bg" class="center" src="{{ url_for('video_feed') }}">
+			<!img id="bg" class="center" src="samp.png">
+		</div>
+	</div>	
+	
+	<div class="split right">
+		<div class="centered" style="top:35%; left:40%;padding-left:18%; 
+		padding-right:0.5%; left:40%; width:80%">
+			<h1 style="font-size:50px;color:red;">Live video of vehicles Tracked</h1>
+			<p style="font-size:25px; color:#41444B;">Rash driving is the cause of many road accidents all over the world.A total of 4,73,084 traffic accidents were reported during the past dacade in India.To overcome this problem an decrease death rate due to accidents, introduction of new and innovative speed enforcement technology is necessary.</p>
+			<p style="color:#ea5455;font-size:30px"></p>
+		</div>
+	</div>
+	
+  </body>
+  
+</html>
